@@ -1,0 +1,49 @@
+
+<p *ngIf="isShow" style="background-color: aqua;">true显示false隐藏</p>
+
+<button (click)="toggleShow()" >*ngIf</button>
+
+<p>双向数据绑定:{{font}}</p>
+
+<li *ngFor="let a of arr;let i=index">
+  {{i+1}}{{a.name}}{{a.age}}
+</li>
+
+<div [ngSwitch]="status">
+  <div *ngSwitchCase="0">等于0</div>
+  <div *ngSwitchCase="1">等于1</div>
+  <div *ngSwitchDefault>否则</div>
+</div>
+
+
+
+<div [ngClass]="class">同时设置粗体,加大字体,背景颜色</div>
+
+<button (click)="setClass()" >设置</button>
+
+
+<div [ngStyle]="currentStyles">    用NgStyle批量修改内联样式！</div>
+<button class="btn btn-success" (click)="setCurrentStyles()">设置</button>
+
+<p class="text-danger">ngModel只能用在表单类的元素上面</p>   
+<input [(ngModel)]="currentRace.name"><p>{{currentRace.name}}</p>
+
+
+
+{{currentTime | date:'yyyy-MM-dd HH:mm:ss'}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

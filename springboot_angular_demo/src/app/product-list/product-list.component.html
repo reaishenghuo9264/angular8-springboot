@@ -1,0 +1,21 @@
+<h2>产品展示</h2>
+<div *ngFor="let pro of products; index as productId">
+  <h3>
+    <a [title]="pro.name + '细节'" [routerLink]="['/products', productId]" >
+      {{pro.name}}
+    </a>
+  </h3>
+  <p *ngIf="pro.description">
+    说明: {{ pro.description }}
+  </p>
+  <button (click)="share()">
+    分享
+  </button>
+
+
+  <app-product-alerts
+    [product]="pro"
+    (notify)="onNotify()">
+  </app-product-alerts>
+
+</div>

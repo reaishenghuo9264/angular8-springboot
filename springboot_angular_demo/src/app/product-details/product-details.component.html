@@ -1,0 +1,15 @@
+<h2>产品详细信息</h2>
+<div *ngIf="product">
+  <h3>{{product.name}}</h3>
+  <h4>{{product.price}}</h4>
+  <P>{{product.description}}</P>
+  <button (click)="addToCart(product)">加入购物车</button>
+</div>
+
+
+
+
+
+
+
+
